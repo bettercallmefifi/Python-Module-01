@@ -151,3 +151,5 @@ if __name__ == "__main__":
     scores = GardenManager.create_garden_network()
     print(f"Garden scores - Alice: {scores['Alice']}, Bob: {scores['Bob']}")
     print("Total gardens managed:", len(GardenManager.gardens))
+
+
