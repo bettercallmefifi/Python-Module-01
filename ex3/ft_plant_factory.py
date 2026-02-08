@@ -1,8 +1,14 @@
+"""Plant Factory: Create multiple plant instances and track total created."""
+
+
 class Plant:
+    """Represent a plant instance and track total created."""
     def __init__(self, name: str, height: int, age: int) -> None:
+        """Initialize a plant and increment the factory count."""
         self.name = name
         self.height = height
         self.age = age
+        """Print a summary string for the plant."""
         print(f"Created: {self.name} ({self.height}cm, {self.age} days)")
 
 

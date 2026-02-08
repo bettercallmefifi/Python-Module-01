@@ -1,3 +1,6 @@
+"""Display basic information about a garden plant."""
+
+
 def ft_garden_info():
     print("=== Welcome to My Garden ===")
 
