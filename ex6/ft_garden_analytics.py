@@ -178,3 +178,26 @@ class GardenManager:
                     score += plant.points
             scores[garden.owner] = score
         return scores
+
+
+
+if __name__ == "__main__":
+    print("=== Garden Management System Demo ===")
+    print()
+    alice = GardenManager("Alice")
+    bob = GardenManager("Bob")
+
+    alice.add_plant(Plant("Oak Tree", 100, 365))
+    alice.add_plant(FloweringPlant("Rose", 25, 120, "red"))
+    alice.add_plant(PrizeFlower("Sunflower", 50, 90, "yellow", 10))
+    
+    print()
+    alice.grow_all()
+    print()
+    alice.report()
+    print()
+    
+    print("Height validation test:", GardenManager.validate_height(10))
+    scores = GardenManager.create_garden_network()
+    print(f"Garden scores - Alice: {scores['Alice']}, Bob: {scores['Bob']}")
+    print("Total gardens managed:", len(GardenManager.gardens)) 
