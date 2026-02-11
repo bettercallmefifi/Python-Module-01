@@ -61,7 +61,6 @@ class PrizeFlower(FloweringPlant):
 
 class GardenManager:
     """Manages collections of plants across multiple gardens."""
-    
     # Class-level list to track all GardenManager instances
     gardens = []
 
@@ -72,7 +71,6 @@ class GardenManager:
         def total_growth(plants: list[Plant]) -> int:
             """
             Calculate the total growth instances of all plants.
-            
             :param plants: List of Plant objects.
             :return: The sum of individual plant growth events.
             """
@@ -128,7 +126,11 @@ class GardenManager:
             plant.grow()
 
     def report(self) -> None:
-        """Print a detailed status report of all plants and garden statistics."""
+        """
+        Print a detailed status report of all plants
+
+        and garden statistics.
+        """
         print(f"==={self.owner}'s Garden Report ===")
         print("Plants in garden:")
         for plant in self.plants:
@@ -141,11 +143,11 @@ class GardenManager:
                       f"{plant.color} flowers (blooming)")
             else:
                 print(f"- {plant.name}: {plant.height}cm")
-        
+
         growth = GardenManager.GardenStats.total_growth(self.plants)
         regular, flowring, prize = (
             GardenManager.GardenStats.count_type(self.plants))
-        
+
         print()
         print(f"Plants added: {len(self.plants)}, "
               f"Total growth: {growth}cm")
@@ -180,7 +182,6 @@ class GardenManager:
         return scores
 
 
-
 if __name__ == "__main__":
     print("=== Garden Management System Demo ===")
     print()
@@ -190,14 +191,14 @@ if __name__ == "__main__":
     alice.add_plant(Plant("Oak Tree", 100, 365))
     alice.add_plant(FloweringPlant("Rose", 25, 120, "red"))
     alice.add_plant(PrizeFlower("Sunflower", 50, 90, "yellow", 10))
-    
+
     print()
     alice.grow_all()
     print()
     alice.report()
     print()
-    
+
     print("Height validation test:", GardenManager.validate_height(10))
     scores = GardenManager.create_garden_network()
     print(f"Garden scores - Alice: {scores['Alice']}, Bob: {scores['Bob']}")
-    print("Total gardens managed:", len(GardenManager.gardens)) 
+    print("Total gardens managed:", len(GardenManager.gardens))
