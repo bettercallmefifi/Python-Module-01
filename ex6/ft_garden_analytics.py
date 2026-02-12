@@ -1,7 +1,7 @@
 class Plant:
     """Base class representing a generic plant."""
 
-    def __init__(self, name: str, height: int, age: int):
+    def __init__(self, name: str, height: int, age: int) -> None:
         """
         Initialize a new Plant instance.
 
@@ -28,7 +28,7 @@ class FloweringPlant(Plant):
             height: int,
             age: int,
             color: str,
-            ):
+            ) -> None:
         """
         Initialize a FloweringPlant.
 
@@ -49,7 +49,7 @@ class PrizeFlower(FloweringPlant):
             age: int,
             color: str,
             points: int,
-            ):
+            ) -> None:
         """
         Initialize a PrizeFlower.
 
