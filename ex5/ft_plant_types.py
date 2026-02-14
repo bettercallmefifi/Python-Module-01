@@ -14,7 +14,7 @@ class Flower(Plant):
         super().__init__(name, height, age)
         self.color = color
 
-    def Bloom(self):
+    def Bloom(self) -> None:
         """Display a message indicating the flower is blooming."""
         print(f"{self.name} is blooming beautifully!")
 
@@ -26,7 +26,7 @@ class Tree(Plant):
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
 
-    def produce_shade(self, shade_area: int):
+    def produce_shade(self, shade_area: int) -> None:
         """Display the shade area produced by the tree"""
         print(f"{self.name} provides {shade_area} square meters of shade")
 
@@ -46,7 +46,7 @@ class Vegetable(Plant):
         self.harvest_season = harvest_season
         self.nutritional_value = nutritional_value
 
-    def rish_of(self):
+    def rish_of(self) -> None:
         """Display the nutritional value of the vegetable."""
         print(f"{self.name} is rich in {self.nutritional_value}")
 

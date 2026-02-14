@@ -10,24 +10,24 @@ class Plant:
         self.height = height
         self.Age = Age
 
-    def grow(self):
+    def grow(self) -> int:
         """Increase the plant's height by 1 cm."""
         self.height = self.height + 1
 
-    def age(self):
+    def age(self) -> int:
         """Increase the plant's age by 1 day."""
         self.Age = self.Age + 1
 
-    def get_info(self):
+    def get_info(self) -> None:
         """Print a summary of the plant's current state."""
         print(f"{self.name}: {self.height}cm, {self.Age} days old")
 
-    def growth(self):
+    def growth(self) -> int:
         """Print the how mush the plant grow up"""
         return self.height - self.initial
 
 
-def main():
+def main() -> None:
     plant_info = Plant("Rose", 25, 30)
 
     print("=== Day 1 ===")
@@ -42,4 +42,5 @@ def main():
     print(f"Growth this week: +{plant_info.growth()}cm")
 
 
-main()
+if __name__ == "__main__":
+	main()

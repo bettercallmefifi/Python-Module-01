@@ -1,7 +1,7 @@
 """Display basic information about a garden plant."""
 
 
-def ft_garden_info():
+def ft_garden_info(plant: str, height: int, age: int) -> None:
     print("=== Welcome to My Garden ===")
 
     plant = "Rose"

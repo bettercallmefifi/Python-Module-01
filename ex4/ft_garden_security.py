@@ -5,14 +5,14 @@ class SecurePlant:
     def __init__(self, name: str, height: int, age: int):
         """Initialize a secure plant and set validated attributes."""
         self.name = name
-        self.height = 0
-        self.age = 0
+        self._height = 0
+        self._age = 0
 
         print(f"Plant created: {self.name}")
         self.set_height(height)
         self.set_age(age)
 
-    def set_height(self, height):
+    def set_height(self, height: int) -> None:
         """Set the plant height if the value is non-negative."""
         if height < 0:
             print(f"Invalid operation attempted: height {height}cm"
@@ -22,7 +22,7 @@ class SecurePlant:
         self._height = height
         print(f"Height updated: {self._height}cm [OK]")
 
-    def set_age(self, age):
+    def set_age(self, age: int) -> None:
         """Set the plant age if the value is non-negative."""
         if age < 0:
             print(f"Invalid operation attempted: age {age} days old"
@@ -31,14 +31,6 @@ class SecurePlant:
             return
         self._age = age
         print(f"Age updated: {self._age} days [OK]\n")
-
-    def get_height(self):
-        """Return the plant height."""
-        return self._height
-
-    def get_age(self):
-        """Return the plant age in days."""
-        return self._age
 
     def get_info(self) -> None:
         """Print the plant's current status."""
@@ -54,4 +46,5 @@ def main():
     rose.get_info()
 
 
-main()
+if __name__ == "__main__":
+	main()

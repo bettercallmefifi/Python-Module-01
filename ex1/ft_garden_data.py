@@ -14,7 +14,7 @@ class Plant:
         self.age = age
 
 
-def test():
+def test(plants: list[tuple[str, int, int]]) -> None:
     plants = [
         ["Rose", 25, 30],
         ["Sunflower", 80, 42],
@@ -27,4 +27,5 @@ def test():
         print(f"{p.name}: {p.height}cm, {p.age} days old")
 
 
-test()
+if __name__ == "__main__":
+	test()

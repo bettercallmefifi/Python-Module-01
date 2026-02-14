@@ -28,5 +28,4 @@ if __name__ == "__main__":
         plant = Plant(name, height, age)
         plants.append(plant)
 
-    print()
     print(f"Totale plants created: {len(plants)}")
