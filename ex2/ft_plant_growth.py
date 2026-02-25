@@ -10,11 +10,11 @@ class Plant:
         self.height = height
         self.Age = Age
 
-    def grow(self) -> int:
+    def grow(self) -> None:
         """Increase the plant's height by 1 cm."""
         self.height = self.height + 1
 
-    def age(self) -> int:
+    def age(self) -> None:
         """Increase the plant's age by 1 day."""
         self.Age = self.Age + 1
 
@@ -22,7 +22,7 @@ class Plant:
         """Print a summary of the plant's current state."""
         print(f"{self.name}: {self.height}cm, {self.Age} days old")
 
-    def growth(self) -> int:
+    def growth(self) -> None:
         """Print the how mush the plant grow up"""
         return self.height - self.initial
 
@@ -43,4 +43,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-	main()
+    main()

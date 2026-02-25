@@ -1,4 +1,3 @@
-print("=== Garden Plant Registry ===")
 """
 This program defines a Plant class used to store and display basic
 information about plants in a community garden.
@@ -14,10 +13,11 @@ class Plant:
         self.age = age
 
 
-def test(plants: list[tuple[str, int, int]]) -> None:
+def test() -> None:
+    print("=== Garden Plant Registry ===")
     plants = [
         ["Rose", 25, 30],
-        ["Sunflower", 80, 42],
+        ["Sunflower", 80, 45],
         ["Cactus", 15, 120],
     ]
 
@@ -28,4 +28,4 @@ def test(plants: list[tuple[str, int, int]]) -> None:
 
 
 if __name__ == "__main__":
-	test()
+    test()

@@ -5,8 +5,8 @@ class SecurePlant:
     def __init__(self, name: str, height: int, age: int):
         """Initialize a secure plant and set validated attributes."""
         self.name = name
-        self._height = 0
-        self._age = 0
+        self.__height = 0
+        self.__age = 0
 
         print(f"Plant created: {self.name}")
         self.set_height(height)
@@ -15,12 +15,12 @@ class SecurePlant:
     def set_height(self, height: int) -> None:
         """Set the plant height if the value is non-negative."""
         if height < 0:
-            print(f"Invalid operation attempted: height {height}cm"
+            print(f"Invalid operation attempted: height {height}cm "
                   "[REJECTED]")
             print("Security: Negative height rejected\n")
             return
-        self._height = height
-        print(f"Height updated: {self._height}cm [OK]")
+        self.__height = height
+        print(f"Height updated: {self.__height}cm [OK]")
 
     def set_age(self, age: int) -> None:
         """Set the plant age if the value is non-negative."""
@@ -29,13 +29,13 @@ class SecurePlant:
                   "[REJECTED]")
             print("Security: Negative age rejected\n")
             return
-        self._age = age
-        print(f"Age updated: {self._age} days [OK]\n")
+        self.__age = age
+        print(f"Age updated: {self.__age} days [OK]\n")
 
     def get_info(self) -> None:
         """Print the plant's current status."""
-        print(f"Current plant: {self.name} ({self._height}cm,"
-              f" {self._age} days old)")
+        print(f"Current plant: {self.name} ({self.__height}cm,"
+              f" {self.__age} days)")
 
 
 def main():
@@ -47,4 +47,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+    main()

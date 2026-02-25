@@ -3,7 +3,7 @@
 
 class Plant:
     """Represent a plant instance and track total created."""
-    def __init__(self, name: str, height: int, age: int) -> None:
+    def __init__(self, name: str, height: int, age: int):
         """Initialize a plant and increment the factory count."""
         self.name = name
         self.height = height
@@ -28,4 +28,5 @@ if __name__ == "__main__":
         plant = Plant(name, height, age)
         plants.append(plant)
 
+    print()
     print(f"Totale plants created: {len(plants)}")

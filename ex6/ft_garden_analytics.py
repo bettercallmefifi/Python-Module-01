@@ -97,7 +97,7 @@ class GardenManager:
                     regular += 1
             return regular, flowering, prize
 
-    def __init__(self, owner: str) -> None:
+    def __init__(self, owner: str):
         """
         Initialize a GardenManager for a specific owner.
 
